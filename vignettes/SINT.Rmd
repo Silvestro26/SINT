@@ -138,6 +138,36 @@ colSums(V)
 
 Both functions stop with an error when the dynamics do not converge.
 
+## Reproducing a published example
+
+@parsegov2017 analyse a group of four actors whose influence matrix was
+reconstructed from experimental data with the method of @friedkin1999. The
+susceptibilities follow the coupling condition
+$\Lambda = I - \mathrm{diag}(W)$, and actor 3, with $w_{33} = 1$, is
+totally stubborn:
+
+```{r published}
+W_p <- matrix(c(0.220, 0.120, 0.360, 0.300,
+                0.147, 0.215, 0.344, 0.294,
+                0,     0,     1,     0,
+                0.090, 0.178, 0.446, 0.286), nrow = 4, byrow = TRUE)
+lambda_p <- 1 - diag(W_p)
+lambda_p
+```
+
+The authors consider opinions on two independent issues, with initial
+opinions $(25, 25, 75, 85)$ and $(25, 15, -50, 5)$, and report the
+equilibria $(60, 60, 75, 75)$ and $(-19.3, -21.5, -50, -23.2)$. Since the
+issues are independent, each is a separate Friedkin-Johnsen model:
+
+```{r published-equilibria}
+round(fj_equilibrium(W_p, lambda_p, c(25, 25, 75, 85)), 1)
+round(fj_equilibrium(W_p, lambda_p, c(25, 15, -50, 5)), 1)
+```
+
+The results agree with the published values up to their rounding. The
+package test suite checks this example.
+
 ## Simulating trajectories
 
 `fj_simulate()` iterates the dynamics until the largest change between two
