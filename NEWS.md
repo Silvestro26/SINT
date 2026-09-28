@@ -1,4 +1,4 @@
-# SINT 0.0.0.9000
+# SINT 0.1.0
 
 * Friedkin-Johnsen core: `fj_check()` validates inputs and reports
   convergence diagnostics, `fj_equilibrium()` and `fj_influence()` compute

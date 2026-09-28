@@ -1,6 +1,6 @@
 Package: SINT
 Title: Simulation and Analysis of Social Influence Network Models
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person("Giulio", "Vidotto", , "silvestro26@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-3854-5087"))
@@ -16,6 +16,8 @@ Description: Tools for specifying, analyzing and simulating models of social
     couple latent opinions with manifest responses through logistic or
     threshold response functions, whose results are aggregated into collective
     outcomes by quota rules.
+URL: https://github.com/Silvestro26/SINT
+BugReports: https://github.com/Silvestro26/SINT/issues
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
