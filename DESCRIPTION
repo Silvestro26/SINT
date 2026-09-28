@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Giulio", "Vidotto", , "silvestro26@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-3854-5087"))
-Description: Tools for specifying, analysing and simulating models of social
+Description: Tools for specifying, analyzing and simulating models of social
     influence network theory based on the Friedkin-Johnsen model, Friedkin
     and Johnsen (1990) <doi:10.1080/0022250X.1990.9990069>, which includes the
     consensus model of DeGroot (1974) <doi:10.1080/01621459.1974.10480137> as

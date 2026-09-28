@@ -19,8 +19,8 @@ knitr::opts_chunk$set(
 library(SINT)
 ```
 
-This guide shows how to specify, analyse and simulate social influence
-network models with SINT. It is organised by task: each section answers one
+This guide shows how to specify, analyze and simulate social influence
+network models with SINT. It is organized by task: each section answers one
 practical question and can be read on its own after the first two.
 
 ## The model
@@ -40,7 +40,7 @@ $\Lambda = I$ the model reduces to the consensus model of @degroot1974.
 
 The package has three layers, which can be used separately:
 
-1. the latent dynamics above, analysed in closed form (`fj_check()`,
+1. the latent dynamics above, analyzed in closed form (`fj_check()`,
    `fj_equilibrium()`, `fj_influence()`) or simulated (`fj_simulate()`,
    `sint_simulate()`);
 2. an optional response stage that maps latent opinions to manifest
@@ -54,7 +54,7 @@ The package has three layers, which can be used separately:
 A model is given by a square matrix `W`, a vector of susceptibilities
 `lambda` and a vector of initial opinions `y0`. When `W` is non-negative it
 must be row-stochastic. Influence weights are often easier to state on an
-arbitrary scale and then normalise with `row_normalize()`:
+arbitrary scale and then normalize with `row_normalize()`:
 
 ```{r specify}
 raw <- matrix(c(3, 1, 0, 0,
@@ -76,7 +76,7 @@ the results.
 
 Network data stored as `igraph` graphs or `network` objects can be converted
 with `influence_matrix()`, which extracts the adjacency matrix, optionally
-valued with an edge attribute, and normalises its rows. By default an edge
+valued with an edge attribute, and normalizes its rows. By default an edge
 from $i$ to $j$ means that $i$ attends to $j$; use
 `direction = "influence"` when edges point from the influencing agent to the
 influenced one. Agents without ties are given a unit self-weight, with a
@@ -141,7 +141,7 @@ round(V, 3)
 When `W` is non-negative the rows of `V` sum to one, so each equilibrium
 opinion is a weighted average of the initial opinions. The diagonal of `V`
 shows how much of its own initial opinion each agent retains, and the column
-sums summarise how much each agent's initial opinion contributes to the
+sums summarize how much each agent's initial opinion contributes to the
 equilibrium opinions of the group:
 
 ```{r influence-summary}
@@ -154,7 +154,7 @@ Both functions stop with an error when the dynamics do not converge.
 
 ## Reproducing a published example
 
-@parsegov2017 analyse a group of four actors whose influence matrix was
+@parsegov2017 analyze a group of four actors whose influence matrix was
 reconstructed from experimental data with the method of @friedkin1999. The
 susceptibilities follow the coupling condition
 $\Lambda = I - \mathrm{diag}(W)$, and actor 3, with $w_{33} = 1$, is
@@ -230,7 +230,7 @@ fall outside their range. The convergence criterion is the same.
 ## Representing external sources
 
 A source whose opinion does not change, such as a media outlet or an
-advocacy organisation, is an agent with susceptibility 0 and a unit
+advocacy organization, is an agent with susceptibility 0 and a unit
 self-weight. Its row in `W` is a row of the identity matrix, so it
 influences others without being influenced:
 
@@ -352,7 +352,7 @@ sim_v$P[, agents]
 `aggregate_quota()` maps manifest responses to a collective outcome. It
 returns 1 when the number of responses equal to 1 exceeds a quota of the
 group, and 0 otherwise; abstentions and opposing responses count as not in
-favour. Applied to a matrix, it returns one outcome per time step:
+favor. Applied to a matrix, it returns one outcome per time step:
 
 ```{r aggregate}
 aggregate_quota(sim_r$P[, agents])

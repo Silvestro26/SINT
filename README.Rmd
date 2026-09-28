@@ -13,13 +13,13 @@ knitr::opts_chunk$set(
 
 # SINT
 
-SINT provides tools for specifying, analysing and simulating models of
+SINT provides tools for specifying, analyzing and simulating models of
 social influence network theory based on the Friedkin-Johnsen model. The
 latent dynamics
 
 $$y(t+1) = \Lambda W y(t) + (I - \Lambda) y(0)$$
 
-can be analysed in closed form (equilibrium, total influence matrix,
+can be analyzed in closed form (equilibrium, total influence matrix,
 convergence diagnostics, also for signed networks) or simulated with influence
 weights and susceptibilities that depend on time and on the state of the
 system. An optional response stage maps latent opinions to manifest

@@ -19,8 +19,8 @@ when \code{P} is a matrix.
 \description{
 Returns \eqn{\Theta(\sum_i 1(P_i = 1) - q n)}, where \eqn{\Theta} is the
 Heaviside step function (1 for positive arguments, 0 otherwise). Only
-responses equal to 1 count in favour; abstentions (0) and opposing
-responses (-1) count as not in favour. With \code{quota = 0.5} this is the
+responses equal to 1 count in favor; abstentions (0) and opposing
+responses (-1) count as not in favor. With \code{quota = 0.5} this is the
 simple majority rule.
 }
 \examples{
