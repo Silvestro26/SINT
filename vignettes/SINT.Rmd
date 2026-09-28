@@ -74,6 +74,20 @@ y0 <- c(0, 0.3, 0.7, 1)
 makes it fully open to influence. Row and column names of `W` are carried to
 the results.
 
+Network data stored as `igraph` graphs or `network` objects can be converted
+with `influence_matrix()`, which extracts the adjacency matrix, optionally
+valued with an edge attribute, and normalises its rows. By default an edge
+from $i$ to $j$ means that $i$ attends to $j$; use
+`direction = "influence"` when edges point from the influencing agent to the
+influenced one. Agents without ties are given a unit self-weight, with a
+warning.
+
+```{r specify-igraph, eval = requireNamespace("igraph", quietly = TRUE)}
+g <- igraph::graph_from_adjacency_matrix(raw, mode = "directed",
+                                         weighted = TRUE)
+all.equal(influence_matrix(g, weights = "weight"), W)
+```
+
 ## Checking convergence
 
 `fj_check()` validates the inputs and reports the spectral radius of

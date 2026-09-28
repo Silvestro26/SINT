@@ -10,4 +10,6 @@
   `climate_balance()` for endogenous normative pressure.
 * `aggregate_quota()` maps manifest responses to collective outcomes.
 * `row_normalize()` builds influence matrices from unnormalized weights.
+* `influence_matrix()` converts matrices, 'igraph' graphs and 'network'
+  objects into influence matrices.
 * User guide vignette, `vignette("SINT")`.
