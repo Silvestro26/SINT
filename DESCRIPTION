@@ -1,11 +1,21 @@
 Package: SINT
-Title: Social Influence Network Theory Models
+Title: Simulation and Analysis of Social Influence Network Models
 Version: 0.0.0.9000
 Authors@R: 
     person("Giulio", "Vidotto", , "silvestro26@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-3854-5087"))
-Description: Tools for simulating and analysing Friedkin-Johnsen social
-    influence network models.
+Description: Tools for specifying, analysing and simulating models of social
+    influence network theory based on the Friedkin-Johnsen model, Friedkin
+    and Johnsen (1990) <doi:10.1080/0022250X.1990.9990069>, which includes the
+    consensus model of DeGroot (1974) <doi:10.1080/01621459.1974.10480137> as
+    a special case. Equilibrium opinions, total influence matrices and
+    convergence diagnostics are computed in closed form, also for signed
+    networks with antagonistic ties, Altafini (2013)
+    <doi:10.1109/TAC.2012.2224251>. Simulations allow influence weights and
+    susceptibilities to depend on time and on the state of the system, and can
+    couple latent opinions with manifest responses through logistic or
+    threshold response functions, whose results are aggregated into collective
+    outcomes by quota rules.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

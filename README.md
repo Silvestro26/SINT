@@ -3,8 +3,9 @@
 
 # SINT
 
-SINT provides tools for simulating and analysing Friedkin-Johnsen social
-influence network models. The latent dynamics
+SINT provides tools for specifying, analysing and simulating models of
+social influence network theory based on the Friedkin-Johnsen model. The
+latent dynamics
 
 $$y(t+1) = \Lambda W y(t) + (I - \Lambda) y(0)$$
 
